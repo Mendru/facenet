@@ -1,0 +1,7 @@
+arguments: align_dataset_mtcnn.py D:\cv\ASI-cv\CASIA-FaceV5 D:\cv\ASI-cv\test-160 --image_size 160 --margin 32 --random_order
+--------------------
+tensorflow version: 1.10.0
+--------------------
+git hash: b'HEAD'
+--------------------
+b''
