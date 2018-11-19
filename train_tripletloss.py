@@ -38,8 +38,7 @@ import itertools
 import argparse
 import facenet
 import lfw
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+
 
 from tensorflow.python.ops import data_flow_ops
 
@@ -182,7 +181,6 @@ def main(args):
 
             if args.pretrained_model:
                 print('Restoring pretrained model: %s' % args.pretrained_model)
-                #saver.restore(sess, os.path.expanduser(args.pretrained_model))
                 facenet.load_model(args.pretrained_model)
 
             # Training and validation loop
@@ -436,7 +434,7 @@ def parse_arguments(argv):
     parser.add_argument('--gpu_memory_fraction', type=float,
         help='Upper bound on the amount of GPU memory that will be used by the process.', default=1.0)
     parser.add_argument('--pretrained_model', type=str,
-        help='Load a pretrained model before training starts.',default='~/facenet/20170512-110547')
+      help='Load a pretrained model before training starts.',default='~/facenet/20170512-110547')
     parser.add_argument('--data_dir', type=str,
         help='Path to the data directory containing aligned face patches.',
         #default='~/datasets/casia/casia_maxpy_mtcnnalign_182_160')
