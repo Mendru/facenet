@@ -38,7 +38,8 @@ import itertools
 import argparse
 import facenet
 import lfw
-
+import OS
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'#如果有多块显卡，可以指定第几块显卡，0即为第一块显卡。
 
 from tensorflow.python.ops import data_flow_ops
 
